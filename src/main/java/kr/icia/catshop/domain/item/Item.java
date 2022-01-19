@@ -1,4 +1,4 @@
-package kr.icia.catshop;
+package kr.icia.catshop.domain;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,9 +10,13 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @Setter
-public class Member {
+public abstract class Item {
     @Id
     @GeneratedValue
     private Long id;
-    private String username;
+
+    private String name;
+    private int price;
+    private int stockQuantity;
+
 }
